@@ -104,18 +104,10 @@ class Game extends React.Component {
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
-                    <button className="sortMoves" onClick={this.sortMoves(moves)}>
-                        Sort Moves</button>
                     <ol>{moves}</ol>
                 </div>
             </div>
         );
-    }
-    sortMoves(moves) {
-        if (!Array.isArray(moves) || !moves.length){
-            this.state.ascendingOrDescending ? this.moves.sort() : this.moves.reverse();
-        }
-        //else do nothing
     }
     handleClick(i) {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
