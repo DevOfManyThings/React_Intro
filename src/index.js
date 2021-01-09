@@ -33,8 +33,8 @@ class Board extends React.Component {
     }
 
     render() {
-        const rowLength = 3;
-        const columnHeight = 3;
+        const rowLength = 3; //can't be modified without changing the winner detection logic
+        const columnHeight = 3; //can't be modified without changing the winner detection logic
         let gridPosition = 0;
         let board = [];
 
